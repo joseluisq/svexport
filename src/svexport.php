@@ -93,6 +93,37 @@ class SVExport {
     $this->_buffer = str_replace("\r", "", $rows_str);
     return $this->_buffer;
   }
+  
+  /**
+   * Load TVS or CVS from file to array
+   * 
+   * @param array $filepath    Filepath.
+   * @return array
+   */
+  function fromFile($filepath, $load_keys = FALSE) {
+    $array = array();
+
+    if (!file_exists($filepath)) {
+      return $array;
+    }
+
+    $content = file($filepath);
+
+    for ($x = 0; $x < count($content); $x++) {
+      if (trim($content[$x]) != '') {
+        $line = explode($this->_delimiter, trim($content[$x]));
+
+        if ($load_keys) {
+          $key = array_shift($line);
+          $array[$key] = $line;
+        } else {
+          $array[] = $line;
+        }
+      }
+    }
+
+    return $array;
+  }
 
   /**
    * Returns string buffer.
