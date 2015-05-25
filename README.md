@@ -1,6 +1,6 @@
 # SVExport
 
-> Simple character-separated values exporter (CSV and TSV).
+> Simple PHP character-separated values exporter (CSV and TSV).
 
 ## Usage
 
