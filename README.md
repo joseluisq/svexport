@@ -6,7 +6,7 @@
 
 ```php
 $data_source = array(
-  array('19880920', 'John', 'Doe', 'john.doe@mail.com', 'Lima', 'Perú'))
+  array('19880920', 'John', 'Doe', 'john.doe@mail.com', 'Lima', 'Perú')
 );
 
 $export = new SVExport();
