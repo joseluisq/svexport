@@ -14,6 +14,7 @@ $export->toTSV();
 $export->fromArray($data_source);
 $export->output();
 ```
+## License
+MIT license
 
-## Licence
-MIT licence
+© 2016 [José Luis Quintana](http://git.io/joseluisq)
